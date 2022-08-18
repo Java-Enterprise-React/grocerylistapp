@@ -1,0 +1,30 @@
+What is OOP?
+    Object-oriented program
+    - the idea of replicating real life objects in code
+
+What are the 4 pillars of OOP?
+    - Abstraction
+        - the idea of hiding how something is done.
+        - Where do we see abstraction in java?
+            - interfaces and abstract classes
+                - an interface is a contract between the interface itself and the classes that implement it
+                    - an interface is fully abstract 
+                    - an abstract class is partly abstract
+    - Inheritance
+        - concept of passing state and behavior from parent classes to child classes
+        - Where do we see this in java?
+            the extends keyword
+    - Encapsulation
+        - restriction of direct access
+        - How do we restrict direct access?
+            - through access modifiers
+        - What are the 4 access modifiers?
+            - public, protected, default and private
+        - General rule?
+            - variables are private
+            - getter and setters are public
+    - Polymorphism
+        - concept of taking on many forms
+        - Where do we see this in java?
+            - method overloading
+            - method overriding

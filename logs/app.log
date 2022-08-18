@@ -1,0 +1,76 @@
+2022-08-12 13:15:19,725 DEBUG c.r.App [main] This is a debug log
+2022-08-12 13:16:16,066 DEBUG c.r.App [main] This is a debug log
+2022-08-12 13:21:45,335 INFO c.r.c.MainMenu [main] User kev123 successfully logged into system
+2022-08-12 13:31:14,069 INFO c.r.c.MainMenu [main] User kev123 successfully logged into system
+2022-08-12 13:32:09,278 INFO c.r.c.MainMenu [main] User kev123 successfully logged into system
+2022-08-12 13:34:35,185 ERROR c.r.u.ConnectionUtil [main] connection attemp error
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "kev"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:646) ~[postgresql-42.3.3.jar:42.3.3]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:180) ~[postgresql-42.3.3.jar:42.3.3]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235) ~[postgresql-42.3.3.jar:42.3.3]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49) ~[postgresql-42.3.3.jar:42.3.3]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223) ~[postgresql-42.3.3.jar:42.3.3]
+	at org.postgresql.Driver.makeConnection(Driver.java:400) ~[postgresql-42.3.3.jar:42.3.3]
+	at org.postgresql.Driver.connect(Driver.java:259) ~[postgresql-42.3.3.jar:42.3.3]
+	at java.sql.DriverManager.getConnection(DriverManager.java:677) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:228) ~[java.sql:?]
+	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:25) [classes/:?]
+	at com.revature.dao.UserDaoImpl.getUserByUsername(UserDaoImpl.java:97) [classes/:?]
+	at com.revature.services.UserService.validateCredentials(UserService.java:27) [classes/:?]
+	at com.revature.consoleviews.MainMenu.view(MainMenu.java:34) [classes/:?]
+	at com.revature.App.main(App.java:44) [classes/:?]
+2022-08-12 13:36:00,178 ERROR c.r.u.ConnectionUtil [main] connection attemp error
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "completelyridic"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:646) ~[postgresql-42.3.3.jar:42.3.3]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:180) ~[postgresql-42.3.3.jar:42.3.3]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235) ~[postgresql-42.3.3.jar:42.3.3]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49) ~[postgresql-42.3.3.jar:42.3.3]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223) ~[postgresql-42.3.3.jar:42.3.3]
+	at org.postgresql.Driver.makeConnection(Driver.java:400) ~[postgresql-42.3.3.jar:42.3.3]
+	at org.postgresql.Driver.connect(Driver.java:259) ~[postgresql-42.3.3.jar:42.3.3]
+	at java.sql.DriverManager.getConnection(DriverManager.java:677) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:228) ~[java.sql:?]
+	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:25) [classes/:?]
+	at com.revature.dao.UserDaoImpl.getUserByUsername(UserDaoImpl.java:97) [classes/:?]
+	at com.revature.services.UserService.validateCredentials(UserService.java:27) [classes/:?]
+	at com.revature.consoleviews.MainMenu.view(MainMenu.java:34) [classes/:?]
+	at com.revature.App.main(App.java:44) [classes/:?]
+2022-08-12 13:36:23,772 ERROR c.r.u.ConnectionUtil [main] connection attemp error
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "kev"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:646) ~[postgresql-42.3.3.jar:42.3.3]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:180) ~[postgresql-42.3.3.jar:42.3.3]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235) ~[postgresql-42.3.3.jar:42.3.3]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49) ~[postgresql-42.3.3.jar:42.3.3]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223) ~[postgresql-42.3.3.jar:42.3.3]
+	at org.postgresql.Driver.makeConnection(Driver.java:400) ~[postgresql-42.3.3.jar:42.3.3]
+	at org.postgresql.Driver.connect(Driver.java:259) ~[postgresql-42.3.3.jar:42.3.3]
+	at java.sql.DriverManager.getConnection(DriverManager.java:677) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:228) ~[java.sql:?]
+	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:25) [classes/:?]
+	at com.revature.dao.UserDaoImpl.getUserByUsername(UserDaoImpl.java:97) [classes/:?]
+	at com.revature.services.UserService.validateCredentials(UserService.java:27) [classes/:?]
+	at com.revature.consoleviews.MainMenu.view(MainMenu.java:34) [classes/:?]
+	at com.revature.App.main(App.java:44) [classes/:?]
+2022-08-12 13:38:46,539 ERROR c.r.u.ConnectionUtil [main] connection attemp error
+org.postgresql.util.PSQLException: The connection attempt failed.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:331) ~[postgresql-42.3.3.jar:42.3.3]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49) ~[postgresql-42.3.3.jar:42.3.3]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223) ~[postgresql-42.3.3.jar:42.3.3]
+	at org.postgresql.Driver.makeConnection(Driver.java:400) ~[postgresql-42.3.3.jar:42.3.3]
+	at org.postgresql.Driver.connect(Driver.java:259) ~[postgresql-42.3.3.jar:42.3.3]
+	at java.sql.DriverManager.getConnection(DriverManager.java:677) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:228) ~[java.sql:?]
+	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:25) [classes/:?]
+	at com.revature.dao.UserDaoImpl.getUserByUsername(UserDaoImpl.java:97) [classes/:?]
+	at com.revature.services.UserService.validateCredentials(UserService.java:27) [classes/:?]
+	at com.revature.consoleviews.MainMenu.view(MainMenu.java:34) [classes/:?]
+	at com.revature.App.main(App.java:44) [classes/:?]
+Caused by: java.net.UnknownHostException: tkc-jer-db.cvtq9j4axrge.us-east-1.rds.amazonaws.com
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:229) ~[?:?]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:?]
+	at java.net.Socket.connect(Socket.java:609) ~[?:?]
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:241) ~[postgresql-42.3.3.jar:42.3.3]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:98) ~[postgresql-42.3.3.jar:42.3.3]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:109) ~[postgresql-42.3.3.jar:42.3.3]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235) ~[postgresql-42.3.3.jar:42.3.3]
+	... 11 more
