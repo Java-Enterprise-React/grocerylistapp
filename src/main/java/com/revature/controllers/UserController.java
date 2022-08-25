@@ -16,7 +16,7 @@ public class UserController {
         User userFromDb = userService.createUser(userCredentials);
 
         if(userFromDb == null){
-            ctx.json(new JsonResponse(false, "username already exists in system. please user another username", null));
+            ctx.json(new JsonResponse(false, "username already exists in system", null));
         }else{
             ctx.json(new JsonResponse(true, "user created", userFromDb));
         }

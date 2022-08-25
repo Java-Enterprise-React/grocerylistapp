@@ -8,12 +8,13 @@ import com.revature.controllers.SessionController;
 import com.revature.controllers.UserController;
 
 import io.javalin.Javalin;
+import io.javalin.http.staticfiles.Location;
 
 /**
  * Grocery List
- *  register a new user
- *  login as a new user
- *  When im logged in,
+ *  register a new user //register page
+ *  login as a new user // login page
+ *  When im logged in, //dashbaord page
  *      create new grocery list item
  *          be able to define 
  *              qty of that item
@@ -42,10 +43,14 @@ public class App
         GroceryItemController groceryItemController = new GroceryItemController();
         SessionController sessionController = new SessionController();
 
-        /* MainMenu mainMenu = new MainMenu();
-        mainMenu.view(); */
-
-        Javalin app = Javalin.create().start(9000);
+        /* 
+            addStaticFiles is how we are going to host our frontend 
+                - you will put your frontend structure in the resources folder
+        */
+        Javalin app = Javalin.create(config -> {
+            //Location.CLASSPATH is referencing the resources folder for maven
+            config.addStaticFiles("/frontend", Location.CLASSPATH);
+        }).start(9000);
 
 
         //register user

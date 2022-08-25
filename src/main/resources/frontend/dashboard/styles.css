@@ -1,0 +1,59 @@
+#items-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item{
+    background-color: rgb(212, 212, 212);
+
+    width: 600px;
+
+    padding: 10px;
+    margin-top: 10px;
+
+    display: flex;
+    justify-content: space-between;
+
+    border-radius: 6px;
+}
+
+.item-name-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.item-name{
+    font-size: 24px;
+}
+
+
+
+#add-item-form{
+    width: 100%;
+
+    position: fixed;
+
+    bottom: 0px;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: rgb(26, 26, 26);
+    padding: 10px;
+
+}
+
+#add-item-form input{
+    margin-right: 10px;
+}
+
+
+#name-to-create{
+    width: 300px;
+}
+
+#qty-to-create{
+    width: 60px;
+}

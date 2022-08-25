@@ -1,0 +1,31 @@
+#register-form-container{
+    display: flex;
+    justify-content: space-evenly;
+
+    margin-top: 50px;
+}
+
+#register-form{
+    width: 400px;
+    background-color: rgb(215, 220, 221);
+    border-radius: 6px;
+
+    box-shadow: 2px 2px 8px rgb(93, 93, 93);
+
+    padding: 20px;
+}
+
+#register-form input{
+    width: 100%;
+    margin-bottom: 5px;
+
+    padding: 6px;
+
+    border-radius: 6px;
+    border: none;
+}
+
+#message{
+    color: red;
+    display: none;
+}

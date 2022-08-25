@@ -48,7 +48,8 @@ public class UserService {
 
         if(userFromDb == null){
             userDao.createUser(userToCreate);
-            return userToCreate;
+            userFromDb = userDao.getUserByUsername(userToCreate.getUsername());
+            return userFromDb;
         }
 
         return null;
