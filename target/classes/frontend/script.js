@@ -1,6 +1,6 @@
 
 window.onload = async () => {
-    let response = await fetch("http://localhost:9000/api/session");
+    let response = await fetch("/api/session");
 
     let responseBody = await response.json();
 
@@ -25,7 +25,7 @@ loginFormElem.addEventListener("submit", (event) => {
 
 async function sendLoginRequest(username, password){
 
-    let response = await fetch("http://localhost:9000/api/session", {
+    let response = await fetch("/api/session", {
         method: "POST",
         //JSON.stringfy() converts javascript objects to json strings
         body: JSON.stringify({
