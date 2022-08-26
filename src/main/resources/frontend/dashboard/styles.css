@@ -28,6 +28,10 @@
     font-size: 24px;
 }
 
+.item-name:hover{
+    cursor: pointer;
+}
+
 
 
 #add-item-form{
@@ -57,3 +61,20 @@
 #qty-to-create{
     width: 60px;
 }
+
+
+/* 
+    media queries are a way to make our app responsive
+
+    when the screen width is 600px or less, add the properties below
+
+    order matters
+*/
+
+@media screen and (max-width: 600px){
+    .item{
+        width: 90%;
+    }
+}
+
+

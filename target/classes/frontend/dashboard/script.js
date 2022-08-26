@@ -4,7 +4,7 @@ let items;
 
 window.addEventListener("load", async () => {
     
-    let response = await fetch("/api/session");
+    let response = await fetch("http://localhost:9000/api/session");
     
     let responseBody = await response.json();
     
@@ -20,7 +20,7 @@ window.addEventListener("load", async () => {
 
 
 async function getAllItems(){
-    let response = await fetch("/api/item");
+    let response = await fetch("http://localhost:9000/api/item");
 
     let responseBody = await response.json();
 
@@ -52,6 +52,10 @@ function displayItems(){
         itemElem.className = "item";
         itemElem.id = `item-${item.id}`;
 
+        itemElem.addEventListener("click", () => {
+            console.log("event triggered");
+        })
+
         let itemNameContElem = document.createElement("div");
         itemNameContElem.className = "item-name-container";
 
@@ -66,8 +70,10 @@ function displayItems(){
         }
 
         //if name is clicked, send http request for marking item in cart
-        itemNameElem.addEventListener("click", async () => {
-            await fetch(`/api/item/${item.id}`, {
+        itemNameElem.addEventListener("click", async (event) => {
+            event.stopPropagation();
+
+            await fetch(`http://localhost:9000/api/item/${item.id}`, {
                 method: "PATCH"
             });
             
@@ -79,7 +85,7 @@ function displayItems(){
         deleteBtnElem.innerText = "Delete";
 
         deleteBtnElem.addEventListener("click", async () => {
-            let response = await fetch(`/api/item/${item.id}`, {
+            let response = await fetch(`http://localhost:9000/api/item/${item.id}`, {
                 method: "DELETE"
             });
 
@@ -112,7 +118,7 @@ let addItemFormElem = document.getElementById("add-item-form");
     let nameToCreateElem = document.getElementById("name-to-create");
     let qtyToCreateElem = document.getElementById("qty-to-create");
 
-    let response = await fetch("/api/item", {
+    let response = await fetch("http://localhost:9000/api/item", {
         method: "POST",
         body: JSON.stringify({
             "name": nameToCreateElem.value,

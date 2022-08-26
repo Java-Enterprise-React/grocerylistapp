@@ -1,5 +1,6 @@
 package com.revature.models;
 
+import java.sql.Timestamp;
 
 /* 
  * the models package is going to hold classes that dont have any functionality.

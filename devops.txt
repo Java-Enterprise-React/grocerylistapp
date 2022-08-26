@@ -1,0 +1,27 @@
+
+----CONCEPTUAL
+What is devops?
+    devops is a mindset in a company. Development and Operations must cooperate to automate the deployment of our applications
+
+What are CI/CD pipelines?
+    - series of steps with the ability to automate a step of the deployment
+
+Continuous Integration:
+    - when a new commit happens, a CI pipeline will automate the building and testing of the project
+
+Continuous Delivery:
+    - automation of build, testing and deploying to a production like environment.
+    - then if all the manual tests happen in the production-like environment, it will then be manually deployed to production
+
+Continious Deployment:
+    - automation of build, testing, production-like env and then deploying to production
+
+
+----PRACTICAL
+How are we going to be making a CI/CD pipeline?
+    - AWS Elastic Beanstalk: it is one abstraction away from an EC2
+            - Elastic beanstalk will run your application on an ec2 based on the configuration you provide
+    - AWS CodeBuild: define a series of steps to build our application
+    - AWS CodePipeline: service that allows us to create the CI/CD pipelines
+        - We will be defining a CodeBuild as well what Elastic Beanstalk Environment
+    

@@ -1,4 +1,4 @@
-# # build stage
+# build stage
 # FROM maven:3.6.0-jdk-11-slim AS build
 
 # #copy the pom.xml on my current machine, and put in the image at the location /home/app/pom.xml
@@ -13,7 +13,7 @@
 # run stage
 FROM openjdk:11-jre-slim
 
-COPY target/grocerylistapp-1.0-SNAPSHOT-jar-with-dependencies.jar /home/app/app.jar
+COPY /home/app/target/grocerylistapp-1.0-SNAPSHOT-jar-with-dependencies.jar /home/app/app.jar
 
 # Open port for use
 EXPOSE 9000

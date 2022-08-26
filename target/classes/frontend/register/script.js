@@ -1,5 +1,5 @@
 window.onload = async () => {
-    let response = await fetch("/api/session");
+    let response = await fetch("http://localhost:9000/api/session");
 
     let responseBody = await response.json();
 
@@ -29,7 +29,7 @@ registerFormElem.addEventListener("submit", (event) => {
 
 
 async function sendRegisterRequest(userCredentials){
-    let response = await fetch("/api/user", {
+    let response = await fetch("http://localhost:9000/api/user", {
         method: "POST",
         body: JSON.stringify(userCredentials)
     });
